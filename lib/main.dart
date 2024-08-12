@@ -9,14 +9,60 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Image(
-            fit: BoxFit.contain,
-            height: 600,
-            width: 410,
-            image: AssetImage('assets/images/rdp_logo.png'),
+        appBar: AppBar(
+          backgroundColor: Colors.blue,
+          title: const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text('This'),
+              Text('is'),
+              Text('a'),
+              Text('row'),
+            ],
+          ),
+        ),
+        drawer:  Drawer(
+          child: ListView(
+            children: const [
+              DrawerHeader(
+                child: Text('Header'),
+                decoration: BoxDecoration(
+                  color: Colors.black12,
+                ),
+              ),
+              ListTile(
+                title: Text('Item 1'),
+                onTap: null,                
+              ),
+              ListTile(
+                title: Text('Item 2'),
+                onTap: null,                
+              ),
+            ],
+          )
+        ),
+        bottomNavigationBar: const BottomAppBar(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              IconButton(
+                onPressed: null, 
+                icon: Icon(Icons.home),
+                iconSize: 30,
+              ),
+              IconButton(
+                onPressed: null, 
+                icon: Icon(Icons.settings),
+                iconSize: 30,
+              ),
+              IconButton(
+                onPressed: null, 
+                icon: Icon(Icons.person),
+                iconSize: 30,
+              ),
+            ],
           ),
         ),
       ),
