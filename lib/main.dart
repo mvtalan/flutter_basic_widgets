@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basic_widgets/screens/list_body.dart';
 
 void main() {
   runApp(const MainApp());
@@ -22,6 +23,12 @@ class MainApp extends StatelessWidget {
               Text('row'),
             ],
           ),
+        ),
+        body: ListView.builder(
+          itemCount: numbers.length,
+          itemBuilder: (BuildContext context, int index) {
+            return numbers[index];
+          },
         ),
         drawer:  Drawer(
           child: ListView(
