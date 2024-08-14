@@ -3,29 +3,30 @@ import 'dart:ui';
 
 import 'package:flutter/widgets.dart';
 
-List<String> categories = [
-  'Category 1',
-  'Category 2',
-  'Category 3',
-  'Category 4',
-  'Category 5',
-  'Category 6',
-  'Category 7',
-  'Category 8',
+List<String> photos = [
+  './assets/images/pic1.jpg',
+  './assets/images/pic2.jpg',
+  './assets/images/pic3.jpg',
+  './assets/images/pic4.jpg',
+  './assets/images/pic5.jpg',
+  './assets/images/pic6.jpg',
+  './assets/images/pic7.jpg',
+  './assets/images/pic8.jpg',
 ];
 
 List<Widget> numbers = [
   Column(
     children: [
-      for(int i= 0; i < categories.length; i++) 
+      for(int i= 0; i < photos.length; i++) 
         SizedBox (
             height: 200,
-            width: 400,
+            width: 600,
             child: Card(
-              color: Colors.red,
-              child: Center(child: Text(
-                categories[i],
-                style: TextStyle(fontSize: 30)),)
+              // color: Colors.red,
+              child: Image(
+                fit: BoxFit.cover,
+                image: AssetImage(photos[i]),
+                ),
               ),
         ),
     ], 

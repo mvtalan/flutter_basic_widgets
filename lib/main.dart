@@ -15,12 +15,12 @@ class MainApp extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.blue,
           title: const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('This'),
-              Text('is'),
-              Text('a'),
-              Text('row'),
+              FlutterLogo(size: 40),
+              SizedBox(width: 40),
+              Icon(Icons.notifications, size: 30, color: Colors.white),
+              Icon(Icons.search, size: 30, color: Colors.white),
             ],
           ),
         ),
